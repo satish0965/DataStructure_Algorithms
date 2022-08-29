@@ -1,4 +1,4 @@
-﻿namespace DataStructureAlgorithums
+﻿namespace DataStructureAlgorithums  
 {
     class Program
     {
@@ -8,7 +8,8 @@
             while (flag == "Y" || flag == "y")
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
-                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort");
+                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort" +
+                    "\n5.MergeSort\n6.Anagrams");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -29,6 +30,15 @@
                         BubbleSort bubblesort = new BubbleSort();
                         bubblesort.bubbleSort();
                         break;
+                    case 5:
+                        MergeSort mergesort = new MergeSort();
+                        mergesort.mergeSort();
+                        break;
+                    case 6:
+                        Anagrams anagrams = new Anagrams();
+                        anagrams.checkAnagrams();
+                        break;
+
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -41,31 +51,25 @@
     }
 }
 
-//UC-4
-//4.Bubble Sort
-//a.Desc -> Reads in integers prints them in sorted order using Bubble Sort
-//b.I / P->read in the list ints
-//c. O/P -> Print the Sorted List
-//Results
+//UC_6
+//6.An Anagram Detection Example
+//a. Desc -> One string is an anagram of another if the second is simply a
+//rearrangement of the first. For example, 'heart' and 'earth' are anagrams...
+//b. I/P -> Take 2 Strings as Input such abcd and dcba and Check for Anagrams
+//c. O/P -> The Two Strings are Anagram or not....
+
+//RESULT
 //Welcome To Datastructures and Algorithms
 //1.Permutation Using Recursion
 //2.BinarySearch
 //3.InsertionSort
 //4.BubbleSort
+//5.MergeSort
+//6.Anagrams
 //Enter Your Option
-//4
-//Enter size of array: 5
+//6
+//Enter first string:   a gentleman
 
-//Enter array elements:
-//45
-//67
-//43
-//57
-//24
+//Enter second string:   elegant man
 
-
-//Array before sorting:
-//45 67 43 57 24
-
-//Array after sorting:
-//24 43 45 57 67
+//String a gentleman and elegant man are anagram of each other.
