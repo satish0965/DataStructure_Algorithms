@@ -1,6 +1,4 @@
-﻿using DataStructureAlgorithums;
-
-namespace DataStructureAlgorithums
+﻿namespace DataStructureAlgorithums
 {
     class Program
     {
@@ -10,7 +8,7 @@ namespace DataStructureAlgorithums
             while (flag == "Y" || flag == "y")
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
-                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort");
+                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -27,6 +25,10 @@ namespace DataStructureAlgorithums
                         InsertionSort insertionsort = new InsertionSort();
                         insertionsort.insertionSort();
                         break;
+                    case 4:
+                        BubbleSort bubblesort = new BubbleSort();
+                        bubblesort.bubbleSort();
+                        break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -39,40 +41,31 @@ namespace DataStructureAlgorithums
     }
 }
 
-//UC-3
-//3.Insertion Sorta
-//.Desc -> Reads in strings and prints them in sorted order using insertion sort.
-//b.I / P->read in the list words
-//c. Logic -> Use Insertion Sort to sort the words in the String array
-//d. O/P -> Print the Sorted List
-
+//UC-4
+//4.Bubble Sort
+//a.Desc -> Reads in integers prints them in sorted order using Bubble Sort
+//b.I / P->read in the list ints
+//c. O/P -> Print the Sorted List
 //Results
 //Welcome To Datastructures and Algorithms
 //1.Permutation Using Recursion
 //2.BinarySearch
 //3.InsertionSort
+//4.BubbleSort
 //Enter Your Option
-//3
+//4
+//Enter size of array: 5
+
+//Enter array elements:
+//45
+//67
+//43
+//57
+//24
+
+
 //Array before sorting:
-//white
-//black
-//blue
-//green
-//red
-//orange
-//brown
-//yellow
-//pink
-//magenta
+//45 67 43 57 24
 
 //Array after sorting:
-//black
-//blue
-//brown
-//green
-//magenta
-//orange
-//pink
-//red
-//white
-//yellow
+//24 43 45 57 67
